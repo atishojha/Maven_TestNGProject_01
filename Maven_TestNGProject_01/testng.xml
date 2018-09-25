@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+ <suite name="Suite"> 
+  
+<!--*****************************@use for parallel Testing******************************** 
+<suite name="Suite" parallel="methods" thread-count="2">
+-->
+ 
+<!--************************  @use for Generating extent reports**************************** 
+  <listeners>
+<listener class-name="com.flipkart.qa.ExtentReportListener.ExtentReporterNG" />
+</listeners> 
+  -->
+  
+  <test thread-count="5" name="Test">
+  
+ 
+<!--*************************** @Use for Parameter testing******************************** 
+      <parameter name="uid" value="9732490916"/>
+      <parameter name="pwd" value="atishojha"/>
+-->     
+     
+<!--************************* @User for Grouping test***********************************   
+  <groups>
+   <run>
+        <include name= "Sanity" />  -->
+  <!--      <include name= ".*gression.*"/>   @Use for pattern matching   -->
+  <!--      <exclude name= "Regression" />    -->
+  <!--  </run>
+ </groups> -->
+ 
+ 
+<!--************************@Use for Grouping of Group testing**********************************
+  <groups>
+      <define name="Group1">
+         <include name="Smoke"/>
+          <include name="Sanity"/>
+       </define>
+       <define name="Group2">
+         <include name="Functional"/>
+          <include name="Regression"/>
+       </define>
+   <run>
+      <include name="Group1" />
+      <include name="Group2" />
+   </run> 
+ </groups> 
+  -->
+    <classes>
+  <!--  <class name="com.flipkart.qa.testcases.LoginTest_FromSingleExcelRecord"/>  -->
+  <!--  <class name="com.flipkart.qa.parameterization.LoginTest_TestngParameters"/>  -->
+  <!--  <class name="com.flipkart.qa.parameterization.LoginTest_TestngDataprovider"/> -->
+   <!-- <class name="com.flipkart.qa.testcases.LoginTest_FromFileRecord"/>  -->
+  <!--  <class name="com.flipkart.qa.testcases.LoginTest_FromHardcodeRecord"/>  -->
+   <!-- <class name="com.flipkart.qa.testcases.LoginTest_GroupingTestcase"/> -->
+ <!--   <class name="com.flipkart.qa.paralleltesting.LoginTest_ParallelTest"/>  -->
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite --> 

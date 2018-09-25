@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.flipkart.qa.testcases.LoginTest_GroupingTestcase">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="MobilesTest"/>
+          <include name="WomenfasionTest"/>
+          <include name="TitleValitationTest"/>
+        </methods>
+      </class> <!-- com.flipkart.qa.testcases.LoginTest_GroupingTestcase -->
+      <class name="com.flipkart.dependencytest.LoginTest_dependsOnGroups">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="MenfasionTest"/>
+          <include name="WomenfasionTest"/>
+          <include name="MobilesTest"/>
+        </methods>
+      </class> <!-- com.flipkart.dependencytest.LoginTest_dependsOnGroups -->
+      <class name="com.flipkart.qa.attributetest.LoginTest_TestAttribute">
+        <methods>
+          <include name="MenfasionTest"/>
+          <include name="tearDown"/>
+          <include name="MobilesTest"/>
+          <include name="SkipExceptionTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.flipkart.qa.attributetest.LoginTest_TestAttribute -->
+      <class name="com.flipkart.dependencytest.LoginTest_dependsOnMethods">
+        <methods>
+          <include name="MobilesTest"/>
+          <include name="WomenfasionTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.flipkart.dependencytest.LoginTest_dependsOnMethods -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
