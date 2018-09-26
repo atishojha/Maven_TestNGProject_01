@@ -10,11 +10,18 @@ import org.testng.asserts.SoftAssert;
 import com.flipkart.qa.base.TestBase;
 import com.flipkart.qa.pages.HomePage;
 import com.flipkart.qa.pages.LoginPage;
-
+/*
+Selenium Assertions can be of three types: “assert”, “verify”, and ” waitFor”. 
+ When an “assert” fails, the test is aborted.
+ When a “verify” fails, the test will continue execution, logging the failure.
+ and a “waitFor” command waits for some condition to become true. They will fail and halt the test if the condition does not become 
+ true within the current timeout setting.
+ When, we talk about the assertions used in WebDriver using TestNg framework, we have two types of assertions; hard and soft assertion.
+ */
 public class LoginTest_AssertionTest extends TestBase {
 	LoginPage loginpage;
 	HomePage homepage;
-	SoftAssert softassert=new SoftAssert();
+	SoftAssert softassert=new SoftAssert();    //Object for soft assertion
 	public LoginTest_AssertionTest() {
 		super();
 		}
